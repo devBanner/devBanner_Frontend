@@ -1,0 +1,248 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-logo-wo-icon1 {
+  width: 3.60546875em;
+}
+
+.icon-appstore1 {
+  width: 3.8173828125em;
+}
+
+.icon-playstore1 {
+  width: 3.8154296875em;
+}
+
+.icon-apple1 {
+  width: 0.6640625em;
+}
+
+.icon-android1 {
+  width: 0.734375em;
+}
+
+.icon-logo-w-icon1 {
+  width: 3.66796875em;
+}
+
+.icon-search2 {
+  width: 0.7822265625em;
+}
+
+.icon-menu2 {
+  width: 0.7509765625em;
+}
+
+.icon-x2 {
+  width: 0.671875em;
+}
+
+.icon-tag2 {
+  width: 0.78125em;
+}
+
+.icon-attachment {
+  width: 0.5em;
+}
+
+.icon-reply {
+  width: 0.9658203125em;
+}
+
+.icon-back2 {
+  width: 0.4677734375em;
+}
+
+.icon-person2 {
+  width: 0.9287109375em;
+}
+
+.icon-skills2 {
+  width: 0.9501953125em;
+}
+
+.icon-location2 {
+  width: 0.5966796875em;
+}
+
+.icon-lock2 {
+  width: 0.67578125em;
+}
+
+.icon-rantsemoticon2 {
+  width: 0.859375em;
+}
+
+.icon-plus2 {
+  width: 1.2109375em;
+}
+
+.icon-minus {
+  width: 1.025390625em;
+}
+
+.icon-settings2 {
+  width: 0.9072265625em;
+}
+
+.icon-about2 {
+  width: 0.71875em;
+}
+
+.icon-feedback2 {
+  width: 0.830078125em;
+}
+
+.icon-moredots2 {
+  width: 0.916015625em;
+}
+
+.icon-email2 {
+  width: 0.9228515625em;
+}
+
+.icon-share-android2 {
+  width: 0.83203125em;
+}
+
+.icon-share-ios2 {
+  width: 0.693359375em;
+}
+
+.icon-refresh2 {
+  width: 0.8056640625em;
+}
+
+.icon-logo3 {
+  width: 4.966796875em;
+}
+
+.icon-forward1 {
+  width: 0.4677734375em;
+}
+
+.icon-filter2 {
+  width: 0.67578125em;
+}
+
+.icon-github2 {
+  width: 0.7578125em;
+}
+
+.icon-sticker1 {
+  width: 0.71875em;
+}
+
+.icon-bell1 {
+  width: 0.8125em;
+}
+
+.icon-twitter-logo1 {
+  width: 0.8291015625em;
+}
+
+.icon-fb-logo1 {
+  width: 0.373046875em;
+}
+
+.icon-apple-logo1 {
+  width: 0.6455078125em;
+}
+
+.icon-andriod-logo1 {
+  width: 0.712890625em;
+}
+
+.icon-plus-circle1 {
+  width: 0.8798828125em;
+}
+
+.icon-x-circle1 {
+  width: 0.8759765625em;
+}
+
+.icon-calendar1 {
+  width: 0.7529296875em;
+}
+
+.icon-plusplus1 {
+  width: 1.64453125em;
+}
+
+.icon-minusminus1 {
+  width: 1.466796875em;
+}
+
+.icon-minusminus-circle1 {
+  width: 0.814453125em;
+}
+
+.icon-plusplus-circle1 {
+  width: 0.814453125em;
+}
+
+.icon-swag1 {
+  width: 0.9296875em;
+}
+
+.icon-fb-logo2 {
+  width: 0.732421875em;
+}
+
+.icon-check1 {
+  width: 0.92578125em;
+}
+
+.icon-image1 {
+  width: 0.771484375em;
+}
+
+.icon-edit1 {
+  width: 0.75390625em;
+}
+
+.icon-rantsemoticon-emoji1 {
+  width: 0.8583984375em;
+}
+
+.icon-rantsemoticon-base1 {
+  width: 0.8583984375em;
+}
+
+.icon-youtube-logo1 {
+  width: 0.8720703125em;
+}
+
+.icon-web1 {
+  width: 0.7529296875em;
+}
+
+.icon-clock1 {
+  width: 0.7509765625em;
+}
+
+.icon-collabs1 {
+  width: 0.9306640625em;
+}
+
+.icon-podcast1 {
+  width: 0.705078125em;
+}
+
+.icon-summary1 {
+  width: 0.7216796875em;
+}
