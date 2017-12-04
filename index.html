@@ -20,7 +20,7 @@ you don't need to insert %20 for space, just write the subtext and you are good 
     coding
 <br><br><br>
 <b>devRant Username</b> :
-<input type="text" id="username" /> <br>
+<input type="text" id="dRname" /> <br>
 <b>Subtext</b> :
 <input type="text" id="subtext"/>
 <br>
@@ -33,7 +33,7 @@ you don't need to insert %20 for space, just write the subtext and you are good 
     
     
         document.getElementById("create").onclick = function () {
-            var username = document.getElementById("username").value;
+            var username = document.getElementById("dRname").value;
     var subtext = document.getElementById("subtext").value;
     var url = "https://devbanner.center/generate/banner?username="+username+"&subtext="+subtext;
             location.href = url;
