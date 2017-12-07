@@ -1,136 +1,127 @@
-<!--
 <!DOCTYPE html>
 <html>
-    
-<head>
-<style>
-body {
-    background-color: #3a3a3a;
-    color: #FFFFFF;
-}
-</style>
-</head>
-    
-<body>
-    
-    <br>
-    
-    <br>
-    <h4>Update01: 1712041810KST(+0900) It has been fixed, but there are still some issues with storage. Please don't use it unless you really have to or when you never used this service before. Thank you for your cooperation. :D</h4>
-    <br>
-    <h2>Update02: 1712052251KST(+0900) Seems to be fixed. Enjoy!</h2>
-    <br>
-    Current status: <a href="https://t.me/devbanner">Telegram devBanner status page</a>
+    <head>
+        <style>
+            @keyframes slide {
+                from {
+                    background-position: 0 0;
+                }
+                to {
+                    background-position: -900px 0;
+                }
+            }
 
-        <br><br>
-    
-=================================================
-    <br>
-<b>devRant Username</b> :
-<input type="text" id="dRname" /> <br>
-<b>Subtext</b> :
-<input type="text" id="subtext"/>
-<br>
-<br>
+            html, body, .background-image, .wrapper {
+                height: 100%;
+            }
 
-<button id="create"><b>Create</b></button> 
-    <br>
-=================================================
-    <br><br>
-    Explanation <br>
-Hello everyone! I am *cozyplanes*, and i made this stupid frontend, so beautiful, don't you think? (it is called minimalism)<br>
-Better one coming soon, but til then, use this
-<br><br>
-Word wrap isnt supported yet, sorry
-<br><br>
-you don't need to insert %20 for space, just write the subtext and you are good to go!
-    <br>
-    <br>
-    for newline, put %0A, sth like this: I love%0Acoding
-    <br>
-    which results<br>
-    I love<br>
-    coding
-<br><br><br>
-    
-</body>
-<script type="text/javascript">
-    
-    
-        document.getElementById("create").onclick = function () {
-            var username = document.getElementById("dRname").value;
-    var subtext = document.getElementById("subtext").value;
-    var url = "https://devbanner.center/generate/banner?username="+username+"&subtext="+subtext;
-            location.href = url;
-        };
-    </script>
-</html>
--->
+            body {
+                margin: 0;
+            }
 
-<!DOCTYPE html>
+            .background-image {
+                background-image: url(bg.png);
+                display: block;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: -4px;
+                z-index: 1;
+                -webkit-animation: slide 20s linear infinite;
+            }
 
-<html>
-<head>
+            .content {
+                color: rgb(40, 40, 40);
+                background: rgba(158, 133, 161, 1);
+                border-radius: 5px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                z-index: 2;
+                padding: 0 10px;
+                position: absolute;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+                margin-top: 80px;
+                min-height: 800px;
+            }
 
-	<style>
-	body {
-	   background-color: #3a3a3a;
-	   color: #FFFFFF;
-	}
-	</style>
+            .left {
+                width: 50%;
+                float: left;
+            }
 
-	<title>
-	</title>
-</head>
+            .right {
+                width: 50%;
+                float: right;
+            }
 
-<body>
-	<br>
-	<br>
+            .leftInner {
+                margin-top: 45%;
+            }
 
+            .rightInner  {
+                margin-top: 30%;
+            }
 
-	<h4>Update01: 1712041810KST(+0900) It has been fixed, but there are still some issues with storage. Please don't use it unless you really have to or when you never used this service before. Thank you for your cooperation. :D</h4>
-	<br>
+            .logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
+            label {
+                display: inline-block;
+                width: 145px;
+                text-align: right;
+            }​
+        </style>
 
-	<h2>Update02: 1712052251KST(+0900) Seems to be fixed. Enjoy!</h2>
-	<br>
-	Current status: <a href="https://t.me/devbanner">Telegram devBanner status page</a><br>
-	<br>
-	=================================================<br>
-	<form>
-		
-	<b>devRant Username</b> : <input id="dRname" type="text"><br>
-	<b>Subtext</b> : <input id="subtext" type="text"><br>
-		<br>
-		<button id="create"><b>Create</b></button><br>
-	=================================================<br>
-	<br>
-	Explanation<br>
-	Hello everyone! I am *cozyplanes*, and i made this stupid frontend, so beautiful, don't you think? (it is called minimalism)<br>
-	Better one coming soon, but til then, use this<br>
-	<br>
-	Word wrap isnt supported yet, sorry<br>
-	<br>
-	you don't need to insert %20 for space, just write the subtext and you are good to go!<br>
-	<br>
-	for newline, put %0A, sth like this: I love%0Acoding<br>
-	which results<br>
-	I love<br>
-	coding<br>
-	<br>
-	<br>
-	<script type="text/javascript">
-	  
-	  
-	      document.getElementById("create").onclick = function () {
-	          var username = document.getElementById("dRname").value;
-	  var subtext = document.getElementById("subtext").value;
-	  var url = "https://devbanner.center/generate/banner?username="+username+"&subtext="+subtext;
-	          location.href = url;
-	      };
-	</script> 
-	</form>
-</body>
+        <title>devBanner</title>
+    </head>
+    <body>
+        <div class="background-image"></div>
+        <div class="content">
+            <div class="left">
+                <div class="leftInner">
+                    <img src="logo_optimized.png" class="logo" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightInner">
+                    <h1>devBanner Generator</h1>
+                    <p>To generate your personal banner, fill out the form below:</p>
+                    <form action="https://devbanner.center/generate/banner" method="GET">
+                        <label for="username">devRant Username:</label>
+                        <input name="username" type="text" />
+                        <br>
+                        <label for="subtext">Subtext:</label>
+                        <input name="subtext" type="text" />
+                        <input type="submit" />
+                    </form>
+
+                    <h2>Explanation</h2>
+                    <p>
+                        Hello everyone! I am *cozyplanes*, and i made this stupid frontend, so beautiful, don't you think? (it is called minimalism)
+                        <br>
+                        Better one coming soon, but til then, use this :)
+                    </p>
+                    <p>
+                        I love coding
+                        <br>
+                        <i>Cozyplanes</i>
+                    </p>
+                    <p>
+                        You can subscribe to our Telegram group, for fast status information:
+                        <br>
+                        <a href="https://t.me/devbanner">Telegram devBanner status page</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
 
 
