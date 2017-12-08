@@ -48,28 +48,49 @@
                 min-height: 800px;
             }
 
-            .left {
-                width: 50%;
-                float: left;
-            }
-
             .right {
-                width: 50%;
                 float: right;
             }
 
-            .leftInner {
-                margin-top: 45%;
+            .left {
+            	float: left;
             }
 
-            .rightInner  {
-                margin-top: 30%;
-            }
+            @media (min-width: 1200px) {
+            	.left {
+            		width: 50%;
+            	}
+
+	            .leftInner {
+	                margin-top: 45%;
+	            }
+
+	            .right {
+	                width: 50%;
+	            }
+
+	            .rightInner {
+	            	margin-top: 30%;
+	            }
+	        }
+
+            @media (max-width: 1199px) {
+            	.left {
+            		left: calc(50% + 191px);
+            		width: 100%;
+            	}
+
+	            .rightInner  {
+	                margin-top: 0;
+	            }
+	        }
+
 
             .logo {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+            	max-width: 100%;
             }
 
             label {
