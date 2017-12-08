@@ -3,15 +3,12 @@
     <head>
         <style>
             @keyframes slide {
-                from {
-                    background-position: 0 0;
-                }
                 to {
-                    background-position: -900px 0;
+                    transform: translateX(-900px);
                 }
             }
 
-            html, body, .background-image, .wrapper {
+            html, body, .wrapper {
                 height: 100%;
             }
 
@@ -20,16 +17,27 @@
             }
 
             .background-image {
-                background-image: url(bg.png);
-                display: block;
+            	overflow: hidden;
+            	position: relative;
+            	height: 100%;
+            }
+
+            .background-image:before {
+            	content: "";
+                background: url(bg.png) 0 0 repeat;
+            	position: fixed;
+            	width: 200%;
+            	height: 200%;
                 filter: blur(5px);
                 -webkit-filter: blur(5px);
                 left: 0;
-                position: fixed;
                 right: 0;
                 top: -4px;
+                bottom: 0;
                 z-index: 1;
                 -webkit-animation: slide 20s linear infinite;
+                transform: translate3d(0, 0, 0);
+			    will-change: transform;
             }
 
             .content {
@@ -41,11 +49,12 @@
                 z-index: 2;
                 padding: 0 10px;
                 position: absolute;
+                top: 0;
                 left: 50%;
                 margin-left: -40%;
                 width: 80%;
                 margin-top: 80px;
-                min-height: 800px;
+                height: 800px;
             }
 
             .right {
