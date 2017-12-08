@@ -1,161 +1,158 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            @keyframes slide {
-                to {
-                    transform: translateX(-900px);
-                }
+
+<head>
+    <style>
+        @keyframes slide {
+            to {
+                transform: translateX(-900px);
+            }
+        }
+
+        html,
+        body,
+        .wrapper {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .background-image {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+
+        .background-image:before {
+            content: "";
+            background: url(bg.png) 0 0 repeat;
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            left: 0;
+            right: 0;
+            top: -4px;
+            bottom: 0;
+            z-index: 1;
+            -webkit-animation: slide 20s linear infinite;
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+        }
+
+        .content {
+            color: rgb(40, 40, 40);
+            background: rgba(158, 133, 161, 1);
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            z-index: 2;
+            padding: 0 10px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -40%;
+            width: 80%;
+            margin-top: 80px;
+            height: 800px;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .left {
+            float: left;
+        }
+
+        @media (min-width: 1200px) {
+            .left {
+                width: 50%;
             }
 
-            html, body, .wrapper {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-            }
-
-            .background-image {
-            	overflow: hidden;
-            	position: relative;
-            	height: 100%;
-            }
-
-            .background-image:before {
-            	content: "";
-                background: url(bg.png) 0 0 repeat;
-            	position: fixed;
-            	width: 200%;
-            	height: 200%;
-                filter: blur(5px);
-                -webkit-filter: blur(5px);
-                left: 0;
-                right: 0;
-                top: -4px;
-                bottom: 0;
-                z-index: 1;
-                -webkit-animation: slide 20s linear infinite;
-                transform: translate3d(0, 0, 0);
-			    will-change: transform;
-            }
-
-            .content {
-                color: rgb(40, 40, 40);
-                background: rgba(158, 133, 161, 1);
-                border-radius: 5px;
-                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                z-index: 2;
-                padding: 0 10px;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                margin-left: -40%;
-                width: 80%;
-                margin-top: 80px;
-                height: 800px;
+            .leftInner {
+                margin-top: 45%;
             }
 
             .right {
-                float: right;
+                width: 50%;
             }
 
+            .rightInner {
+                margin-top: 30%;
+            }
+        }
+
+        @media (max-width: 1199px) {
             .left {
-            	float: left;
+                left: calc(50% + 191px);
+                width: 100%;
             }
 
-            @media (min-width: 1200px) {
-            	.left {
-            		width: 50%;
-            	}
-
-	            .leftInner {
-	                margin-top: 45%;
-	            }
-
-	            .right {
-	                width: 50%;
-	            }
-
-	            .rightInner {
-	            	margin-top: 30%;
-	            }
-	        }
-
-            @media (max-width: 1199px) {
-            	.left {
-            		left: calc(50% + 191px);
-            		width: 100%;
-            	}
-
-	            .rightInner  {
-	                margin-top: 0;
-	            }
-	        }
-
-
-            .logo {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            	max-width: 100%;
+            .rightInner {
+                margin-top: 0;
             }
+        }
 
-            label {
-                display: inline-block;
-                width: 145px;
-                text-align: right;
-            }​
-        </style>
 
-        <title>devBanner</title>
-    </head>
-    <body>
-        <div class="background-image"></div>
-        <div class="content">
-            <div class="left">
-                <div class="leftInner">
-                    <img src="logo_optimized.png" class="logo" />
-                </div>
-            </div>
-            <div class="right">
-                <div class="rightInner">
-                    <h1>devBanner Generator</h1>
-                    <p>To generate your personal banner, fill out the form below:</p>
-                    <form action="https://devbanner.center/generate/banner" method="GET">
-                        <label for="username">devRant Username:</label>
-                        <input name="username" type="text" />
-                        <br>
-                        <label for="subtext">Subtext:</label>
-                        <input name="subtext" type="text" />
-                        <input type="submit" />
-                    </form>
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
 
-                    <h2>Explanation</h2>
-                    <p>
-                        Hello everyone! I am *cozyplanes*, and i made this stupid frontend, so beautiful, don't you think? (it is called minimalism)
-                        <br>
-                        Better one coming soon, but til then, use this :)
-                    </p>
-                    <p>
-                        I love coding
-                        <br>
-                        <i>Cozyplanes</i>
-                    </p>
-                    <p>
-                        You can subscribe to our Telegram group, for fast status information:
-                        <br>
-                        <a href="https://t.me/devbanner">Telegram devBanner status page</a>
-                    </p>
-                </div>
+        label {
+            display: inline-block;
+            width: 145px;
+            text-align: right;
+        }
+    </style>
+    <title>devBanner</title>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="content">
+        <div class="left">
+            <div class="leftInner">
+                <img src="logo_optimized.png" class="logo" />
             </div>
         </div>
-    </body>
+        <div class="right">
+            <div class="rightInner">
+                <h1>devBanner Generator</h1>
+                <p>To generate your personal banner, fill out the form below:</p>
+                <form action="https://devbanner.center/generate/banner" method="GET">
+                    <label for="username">devRant Username:</label>
+                    <input name="username" type="text" />
+                    <br>
+                    <label for="subtext">Subtext:</label>
+                    <input name="subtext" type="text" />
+                    <input type="submit" />
+                </form>
+
+                <h2>Explanation</h2>
+                <p>
+                    Hello everyone! I am *cozyplanes*, and i made this stupid frontend, so beautiful, don't you think? (it is called minimalism)
+                    <br> Better one coming soon, but til then, use this :)
+                </p>
+                <p>
+                    I love coding
+                    <br>
+                    <i>Cozyplanes</i>
+                </p>
+                <p>
+                    You can subscribe to our Telegram group, for fast status information:
+                    <br>
+                    <a href="https://t.me/devbanner">Telegram devBanner status page</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
-
-
-
-
-
-
