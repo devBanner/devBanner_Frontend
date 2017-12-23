@@ -1,0 +1,104 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  height: 1100px;
+  max-width: 100%;
+}
+
+hr {
+  color: white;
+}
+
+input {
+  padding: 5px;
+  margin: 10px;
+  width: 25%;
+  min-width: 250px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+.content {
+  font-weight: bold;
+  text-align: center;
+  background: rgba(158, 133, 161, 1);
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  z-index: 2;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+  margin-top: 50px;
+  height: auto;
+}
+
+/*p's at bottom*/
+.info {
+  font-weight: normal;
+}
+
+#logo {
+  margin: 10px auto;
+  display: block;
+  width: 100%;
+  min-width: 250px;
+  height: auto;
+}
+
+#generateBTN {
+  text-align: center;
+  background-color: rgb(40, 40, 40);
+  display: block;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 0 auto;
+  color: white;
+  width: 250px;
+}
+
+#generateBTN:hover {
+  background-color: darkgrey;
+  color: black;
+}
+
+/*img that displays banner from API*/
+#displayBanner {
+  border: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*Moving Background*/
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-900px, 0, 0);
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 1100px;
+}
+
+.background-image {
+  position: relative;
+  background: url("bg.png") repeat;
+  height: 1200px;
+  width: 5400px;
+  animation: slide 60s linear infinite;
+  filter: blur(5px);
+  top: -50px;
+  left: -50px;
+}
