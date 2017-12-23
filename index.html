@@ -1,175 +1,32 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <style>
-        @keyframes slide {
-            to {
-                transform: translateX(-900px);
-            }
-        }
-
-        html,
-        body,
-        .wrapper {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-        }
-
-        .background-image {
-            overflow: hidden;
-            position: relative;
-            height: 100%;
-        }
-
-        .background-image:before {
-            content: "";
-            background: url(bg.png) 0 0 repeat;
-            position: fixed;
-            width: 200%;
-            height: 200%;
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            left: 0;
-            right: 0;
-            top: -4px;
-            bottom: 0;
-            z-index: 1;
-            -webkit-animation: slide 20s linear infinite;
-            transform: translate3d(0, 0, 0);
-            will-change: transform;
-        }
-
-        .content {
-            color: rgb(40, 40, 40);
-            background: rgba(158, 133, 161, 1);
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            z-index: 2;
-            padding: 0 10px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -40%;
-            width: 80%;
-            margin-top: 50px;
-            height: 1000px;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .left {
-            float: left;
-        }
-
-        @media (min-width: 1200px) {
-            .left {
-                width: 50%;
-            }
-
-            .leftInner {
-                margin-top: 45%;
-            }
-
-            .right {
-                width: 50%;
-            }
-
-            .rightInner {
-                margin-top: 30%;
-            }
-        }
-
-        @media (max-width: 1199px) {
-            .left {
-                left: calc(50% + 191px);
-                width: 100%;
-            }
-
-            .rightInner {
-                margin-top: 0;
-            }
-        }
-
-
-        .logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-        }
-
-        label {
-            display: inline-block;
-            width: 145px;
-            text-align: right;
-        }
-    </style>
-    <title>devBanner | Create your own banner</title>
-</head>
-
-<body>
-    <div class="background-image"></div>
-    <div class="content">
-        <div class="left">
-            <div class="leftInner">
-                <img src="logo_optimized.png" class="logo" />
-            </div>
-        </div>
-        <div class="right">
-            <div class="rightInner">
-                <h1>devBanner Generator</h1>
-                <p>To generate your personal banner, fill out the form below:</p>
-                <form action="https://generator.devbanner.center/banner" method="GET">
-                    <label for="username">devRant Username (not case-sensitive):    </label>
-                    <input name="username" type="text" required/>
-                    <br>
-                    <label for="subtext">Your Banner Subtext:    </label>
-                    <input name="subtext" type="text" required/>
-                    <br>
-                    <input type="submit" />
-                </form>
-
-                <h2>=============</h2>
-                <p>
-                    This is the temporary frontend for devBanner.
-                    <br>
-                    Better frontend coming around December.
-                    <br>
-                </p>
-                <p>
-                    <br>
-                    <i>With love, <br><b>cozyplanes</b> & <b>Kimmax</b> & <b>more</b> !</i>
-                </p>
-                <p>
-                    You can subscribe to our Telegram group, for status information (may have some delay, please mind that):
-                    <br>
-                    <a href="https://t.me/devbanner">Telegram devBanner status page</a>
-                </p>
-                <p>
-                    Contribute to the <b>front-end</b>:
-                    <br>
-                    <a href="https://github.com/devBanner/devBanner_Frontend">https://github.com/devBanner/devBanner_Frontend</a>
-                </p>
-                <p>
-                    Contribute to the <b>back-end</b>:
-                    <br>
-                    <a href="https://github.com/devBanner/devBanner">https://github.com/devBanner/devBanner</a>
-                </p>
-                <p>
-                    If you want to contribute to the project, or want to share ideas with the developers,
-                    <br>
-                    please join our <b>Gitter Chat</b> by clicking <a href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">here</a>.
-                </p>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8">
+    <title>devBanner - Create Your Own devRant Banner!</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="background-image"></div>
     </div>
-</body>
-
+    <div class="content">
+      <img id="logo" src="logo.png" alt="devBanner Logo" height="600" width="2504">
+      <form id="form" target="displayBanner" action="https://generator.devBanner.center/banner" method="get">
+          <label>Username:</label> <input id="username" placeholder="Enter username (not case sensitive)"type="text" name="username" value=""><br />
+          <label>SubText:</label> <input id="subtext" placeholder="Leave blank to use user description" type="text" name="subtext" value="">
+      </form>
+      <button id="generateBTN" >Generate</button>
+      <h2>↓ Your Generated Banner will appear below after a few seconds↓</h2>
+      <hr>
+      <img id="displayBanner" src="examplebanner.png" alt="Error - Please make sure user exists or API may be down">
+      <hr>
+      <p class="info">Created By cozyplanes, Kimmax, and more!</p>
+      <br />
+      <p class="info">Want to subscribe to <b>Telegram</b> for updates? Visit <a target="_blank" href="https://t.me/devbanner">Here</a></p>
+      <p class="info">Want to contribute to the <b>frontend</b> on Github? Visit <a target="_blank" href="https://github.com/devBanner/devBanner_Frontend">Here</a></p>
+      <p class="info">Want to contribute to the <b>backend</b> on Github? Visit <a target="_blank" href="https://github.com/devBanner/devBanner">Here</a></p>
+      <p class="info">Want to contribute or share ideas on <b>Gitter</b> chat? Visit <a target="_blank" href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Here</a></p>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
