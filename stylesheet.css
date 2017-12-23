@@ -100,7 +100,9 @@ label {
   height: 210%;
   width: 5400px;
   animation: slide 60s linear infinite;
+  -webkit-animation: slide 60s linear infinite;
   filter: blur(5px);
+  -webkit-filter: blur(5px);
   top: -50px;
   left: -50px;
 }
