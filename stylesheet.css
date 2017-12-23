@@ -71,9 +71,11 @@ label {
 }
 
 /*img that displays banner from API*/
-#displayBanner {
+#banner {
   border: none;
-  width: 100%;
+  width: 70%;
+  min-width: 250px;
+  image-rendering: pixelated;
   overflow: hidden;
 }
 
