@@ -1,6 +1,6 @@
 var usernameInput = document.getElementById("username");
 var subtextInput = document.getElementById("subtext");
-var displayBanner = document.getElementById("displayBanner");
+var displayBanner = document.getElementById("banner");
 var generatorBTN = document.getElementById("generateBTN");
 var action = "https://generator.devbanner.center/banner?";
 
