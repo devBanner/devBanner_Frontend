@@ -75,7 +75,6 @@ label {
   border: none;
   width: 70%;
   min-width: 250px;
-  image-rendering: pixelated;
   overflow: hidden;
 }
 
