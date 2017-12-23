@@ -81,10 +81,10 @@ label {
 /*Moving Background*/
 @keyframes slide {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(-900px, 0, 0);
+    transform: translateX(-900px);
   }
 }
 
