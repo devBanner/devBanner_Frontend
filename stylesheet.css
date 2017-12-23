@@ -12,7 +12,7 @@ hr {
 
 input {
   padding: 5px;
-  margin: 10px;
+  margin: 0 20px 20px 20px;
   width: 25%;
   min-width: 250px;
 }
@@ -46,7 +46,7 @@ label {
 }
 
 #logo {
-  margin: 10px auto;
+  margin: 0 auto;
   display: block;
   width: 100%;
   min-width: 250px;
@@ -61,6 +61,7 @@ label {
   padding: 10px;
   margin: 0 auto;
   color: white;
+  height: 50px;
   width: 250px;
 }
 
@@ -89,13 +90,13 @@ label {
 .wrapper {
   overflow: hidden;
   position: relative;
-  height: 1100px;
+  height: 120%;
 }
 
 .background-image {
   position: relative;
   background: url("bg.png") repeat;
-  height: 1200px;
+  height: 210%;
   width: 5400px;
   animation: slide 60s linear infinite;
   filter: blur(5px);
