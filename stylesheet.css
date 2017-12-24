@@ -45,6 +45,10 @@ label {
   font-weight: normal;
 }
 
+.hidden {
+  display: none;
+}
+
 #logo {
   margin: 0 auto;
   display: block;
@@ -106,4 +110,18 @@ label {
   -webkit-filter: blur(5px);
   top: -50px;
   left: -50px;
+}
+
+/*Loader Animation*/
+@keyframes spinner {
+  0%{width: 0}
+  50%{width: 70%}
+  100%{width: 0}
+}
+
+#spinner {
+  margin: 50px auto;
+  animation: spinner 1s linear infinite;
+  width: 70%;
+  border: 1px solid white;
 }
