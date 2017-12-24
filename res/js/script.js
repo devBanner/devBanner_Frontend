@@ -24,7 +24,7 @@ $("#bannerForm").submit(function(event) {
   banner.onerror = () => {
     $spinnerOverlay.hide();
     $errorOverlay.show();
-    banner.src = "examplebanner.png";
+    banner.src = "res/images/examplebanner.png";
   };
 
   $spinnerOverlay.fadeIn();

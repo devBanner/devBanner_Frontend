@@ -117,7 +117,7 @@ label {
 
 .background-image {
   position: relative;
-  background: url("bg.png") repeat;
+  background: url("../images/bg.png") repeat;
   height: 210%;
   width: 5400px;
   animation: slide 60s linear infinite;
