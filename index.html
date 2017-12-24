@@ -12,14 +12,16 @@
     </div>
     <div class="content">
       <img id="logo" src="logo.png" alt="devBanner Logo" height="600" width="2504">
-      <form id="form" target="displayBanner" action="https://generator.devBanner.center/banner" method="get">
-          <label>Username:</label> <input id="username" placeholder="Your username here (not case sensitive)"type="text" name="username" value="" autocomplete="false" required><br />
+      <form id="form">
+          <label>Username:</label> <input id="username" placeholder="Your username here" type="text" name="username" value="" autocomplete="false" required><br />
           <label>Subtext:</label> <input id="subtext" placeholder="Your subtext here" type="text" name="subtext" value="" autocomplete="false" required>
+          <button id="generateBTN">Generate</button>
       </form>
-      <button id="generateBTN" >Generate</button>
       <h2>↓ Your Generated Banner will appear below after a few seconds↓</h2>
       <hr>
-      <img id="banner" src="examplebanner.png" alt="Error - Please make sure you are connected to the internet and the user exists, otherwise the API may be down!">
+      <img id="banner" src="examplebanner.png" alt="Example Banner">
+      <p id="bannerError" class="hidden">Error - Did you give a valid username?</p>
+      <div id="spinner" class="hidden"></div>
       <hr>
       <p class="info">Created By cozyplanes, Kimmax, and more!</p>
       <br />
