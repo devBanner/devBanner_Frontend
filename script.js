@@ -28,6 +28,7 @@ $("#bannerForm").submit(function(event) {
   };
 
   $spinnerOverlay.fadeIn();
+  $errorOverlay.hide();
   banner.src = url;
 });
 
