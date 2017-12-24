@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:og='http://ogp.me/ns#'>
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>devBanner - Create Your Own devRant Banner!</title>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,900" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+
+  <!-- The logo
+    ____________________________________________________ -->
+  <div class="container ">
+    <div class="row">
+      <center><img src="logo.png" alt="devbanner" style="width:100%;height:75%;"></img>
+    </div>
+  </div>
+
+  <!-- Generating
+    ____________________________________________________ -->
+  <div id="dp-container">
+    <div class="container padding3">
+      <div class="row">
+        <h3 class="uc wt">Enter here</h3>
+        <form id="form" target="displayBanner" action="https://generator.devBanner.center/banner" method="get">
+          <div class="one-third column">
+            <label for="name">Username:
+              <input type="text" id="username" placeholder="Your Username" value="" autocomplete="false" class="u-full-width" required>
+            </label>
+          </div>
+          <div class="one-third column">
+            <label for="email">Subtext:
+              <input type="text" id="email" placeholder="Your Subtext" value="" autocomplete="false" class="u-full-width" required>
+            </label>
+          </div>
+          <div class="one-third column">
+            <button id="generateBTN" class="button-primary u-full-width cta2">Generate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Banner
+    ____________________________________________________ -->
+  <div id="dp-container" style="background-color:#ED9965;">
+    <div class="container padding">
+      <div class="row">
+        <center><img id="banner" src="examplebanner.png" alt="Error - Please make sure you are connected to the internet and the user exists, otherwise the API may be down!" style="width:100%;height:75%;"></center>
+      </div>
+    </div>
+  </div>
+
+  <!-- The footers for the viperOS
+______________________________________________________________________-->
+  <div class="container" style="padding:5px;"></div>
+  <!-- for the gap between cards and the footer -->
+
+  <footer class="footer-font">
+    <center>
+      <a href="https://github.com/devBanner/devBanner_Frontend" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://t.me/devbanner" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+      <a href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-gitter" aria-hidden="true"></i></a>
+    </center>
+    <center>
+      <p style="font-size:10px;">Created by devranters</p>
+    </center>
+  </footer>
+</body>
+
+</html>
+
+</html>
