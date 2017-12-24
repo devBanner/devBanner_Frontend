@@ -68,6 +68,7 @@ label {
 #generateBTN:hover {
   background-color: darkgrey;
   color: black;
+  cursor: pointer;
 }
 
 /*img that displays banner from API*/
