@@ -81,7 +81,6 @@ label {
   border: none;
   width: 70%;
   min-width: 250px;
-  overflow: hidden;
 }
 
 .bannerOverlay {
@@ -90,9 +89,11 @@ label {
   top: 0;
   left: 0;
   width: 70%;
+  min-width: 250px;
   height: 99%;
-  margin-left: 15%;
   display: none;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .bannerOverlay > p {
