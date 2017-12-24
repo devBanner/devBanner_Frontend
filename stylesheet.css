@@ -71,12 +71,32 @@ label {
   cursor: pointer;
 }
 
+.bannerContainer {
+    width: 100%;
+    position: relative;
+}
+
 /*img that displays banner from API*/
 #banner {
   border: none;
   width: 70%;
   min-width: 250px;
   overflow: hidden;
+}
+
+.bannerOverlay {
+  background-color: rgba(0, 0, 0, .75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 99%;
+  margin-left: 15%;
+  display: none;
+}
+
+.bannerOverlay > p {
+  margin-top: 10%
 }
 
 /*Moving Background*/
