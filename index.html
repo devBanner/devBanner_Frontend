@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>devBanner - Create Your Own devRant Banner!</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="spinner.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="res/css/stylesheet.css">
+    <link rel="stylesheet" href="res/css/spinner.css">
+    <link rel="shortcut icon" type="image/x-icon" href="res/images/favicon.ico">
   </head>
   <body>
     <div class="wrapper">
       <div class="background-image"></div>
     </div>
     <div class="content">
-      <img id="logo" src="logo.png" alt="devBanner Logo" height="600" width="2504">
+      <img id="logo" src="res/images/logo.png" alt="devBanner Logo" height="600" width="2504">
       <form id="bannerForm" target="displayBanner" action="https://generator.devBanner.center/banner" method="get">
           <label>Username:</label>
           <input id="username" placeholder="Your username here" type="text" name="username" autocomplete="false" required>
@@ -25,7 +25,7 @@
       <h2>↓ Your Generated Banner will appear below after a few seconds↓</h2>
       <hr>
       <div class="bannerContainer">
-        <img id="banner" src="examplebanner.png" alt="Your Banner">
+        <img id="banner" src="res/images/examplebanner.png" alt="Your Banner">
         <div class="bannerOverlay errorOverlay">
           <p>
             Cannot generate banner
@@ -46,6 +46,6 @@
       <p class="info">Want to contribute or share ideas on <b>Gitter</b> chat? Visit <a target="_blank" href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Here</a></p>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="res/js/script.js"></script>
   </body>
 </html>

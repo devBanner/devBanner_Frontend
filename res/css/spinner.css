@@ -2,11 +2,12 @@
 .spinner,
 .spinner:after {
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 8em;
+  height: 8em;
+  overflow: hidden;
 }
 .spinner {
-  margin: 60px auto;
+  margin: 0 auto;
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
