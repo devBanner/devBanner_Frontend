@@ -11,8 +11,8 @@ Create your own devRant Banner now!
 https://devbanner.center
 <p align="center">
 
-  <img src="https://img.shields.io/github/issues/devBanner/devBanner_Frontend.svg?style=for-the-badge">
   <img src="https://img.shields.io/github/issues-pr/devBanner/devBanner_Frontend.svg?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/devBanner/devBanner_Frontend.svg?style=for-the-badge">
   <img src="https://img.shields.io/gitter/room/devBanner/devBanner.svg?style=for-the-badge">
   
 </p>
