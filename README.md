@@ -1,4 +1,4 @@
-# devBanner Front-end repository
+# devBanner Front-end repository (WEB)
 Responsive front-end in development.
 If you can contribute, please make a PR. We appreciate it.
 
