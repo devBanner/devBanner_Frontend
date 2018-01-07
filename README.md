@@ -4,11 +4,11 @@ If you can contribute, please make a PR. We appreciate it.
 
 ----
 
-![logo](https://i.imgur.com/fHiT4OO.png "logo")
+<p align="center"><img src="https://i.imgur.com/fHiT4OO.png"/></p> 
 
-
-Create your own devRant Banner now!      
-https://devbanner.center
+<h2 align="center"><b>devBanner</b></h2>
+<h4 align="center">Create your own devRant Banner now!</h4>
+<h4 align="center">https://devbanner.center</h4>
 <p align="center">
 
   <img src="https://img.shields.io/github/issues-pr/devBanner/devBanner_Frontend.svg?style=for-the-badge">
