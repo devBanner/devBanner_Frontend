@@ -1,46 +1,54 @@
-var banner = document.getElementById("banner");
-var wrapper = document.getElementsByClassName("wrapper")[0];
-var backgroundImage = document.getElementsByClassName("background-image")[0];
-var content = document.getElementsByClassName("content")[0];
+// Form
+var generatorForm = $('#generator-form');
+var downloadBtn = $('#downloadBtn');
 
-/*
-Example URL
-https://generator.devbanner.center/banner?username=tisButABug&subtext=test
-*/
+// Banner Elements
+var banner = $('#banner');
+var spinnerOverlay = $('.spinnerOverlay');
+var errorOverlay = $('.errorOverlay');
 
-$("#bannerForm").submit(function(event) {
-  event.preventDefault();
+// Constants
+const API = 'https://generator.devbanner.center/banner?';
+const EXAMPLE_BANNER = 'res/images/examplebanner.png';
 
-  var $form = $(this);
-  var $banner = $("#banner");
-  var $spinnerOverlay = $(".spinnerOverlay");
-  var $errorOverlay = $(".errorOverlay");
-  var url = $form.attr('action') + '?' + $form.serialize();
+generatorForm.on('submit', function (event) {
+	event.preventDefault();
 
-  banner.onload = () => {
-    $spinnerOverlay.fadeOut();
-  };
+	// Create URL
+	var bannerUrl = API + generatorForm.serialize();
 
-  banner.onerror = () => {
-    $spinnerOverlay.hide();
-    $errorOverlay.show();
-    banner.src = "res/images/examplebanner.png";
-  };
+	// Disable spamming generate-button
+	if (banner.prop('src') == bannerUrl) {
+		return;
+	}
 
-  $spinnerOverlay.fadeIn();
-  $errorOverlay.hide();
-  banner.src = url;
+	// Load/Generate banner
+	banner.prop('src', bannerUrl);
+	downloadBtn.prop('href', bannerUrl);
+	downloadBtn.removeClass('disabled');
+
+	// Overlay
+	spinnerOverlay.show();
+	errorOverlay.hide();
 });
 
-function resize() {
-  wrapper.height = window.innerHeight * 1.1;
-  backgroundImage.height = window.innerHeight * 1.2;
-  if(window.innerWidth < 600){
-    content.style.left = "45%";
-  }else{
-    content.style.left = "48%";
-  }
-}
+generatorForm.on('input', function () {
+	// Disable download if input changed (so user gets what he expects)
+	downloadBtn.addClass('disabled');
+});
 
-window.onresize = resize;
-resize();
+banner.on('error', function () {
+	// Set banner to example
+	banner.prop('src', EXAMPLE_BANNER);
+	downloadBtn.prop('href', EXAMPLE_BANNER);
+	downloadBtn.addClass('disabled');
+
+	// Overlay
+	spinnerOverlay.hide();
+	errorOverlay.show();
+});
+
+banner.on('load', function () {
+	// Overlay
+	spinnerOverlay.fadeOut();
+});

@@ -1,51 +1,111 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>devBanner - Create Your Own devRant Banner!</title>
-    <link rel="stylesheet" href="res/css/stylesheet.css">
-    <link rel="stylesheet" href="res/css/spinner.css">
-    <link rel="shortcut icon" type="image/x-icon" href="res/images/favicon.ico">
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="background-image"></div>
-    </div>
-    <div class="content">
-      <img id="logo" src="res/images/logo.png" alt="devBanner Logo" height="600" width="2504">
-      <form id="bannerForm" target="displayBanner" action="https://generator.devBanner.center/banner" method="get">
-          <label>Username:</label>
-          <input id="username" placeholder="Your username here (not case-sensitive)" type="text" name="username" autocomplete="off" required> <br>
-          <label>Subtext:</label>
-          <input id="subtext" placeholder="Your subtext here" type="text" name="subtext" autocomplete="off" required>
-          <input type="submit" id="generateBTN" value="Generate">
-      </form>
-      <h2>↓ Your Generated Banner will appear below after a few seconds ↓</h2>
-      <hr>
-      <div class="bannerContainer">
-        <img id="banner" src="res/images/examplebanner.png" alt="Your Banner">
-        <div class="bannerOverlay errorOverlay">
-          <p>
-            Cannot generate banner
-            <br />
-            Username correct?
-          </p>
-        </div>
-        <div class="bannerOverlay spinnerOverlay">
-          <div class="spinner">Loading..</div>
-        </div>
-      </div>
-      <hr>
-      <a title="Check out the cool contributers!" href="https://devcredits.herokuapp.com/?title=devBanner&users=cozyplanes,Kimmax,mitiko,ewpratten"><p class="info">Credits</p></a>
-      <br />
-      <p class="info">Want to subscribe to <b>Telegram</b> for updates? Visit <a target="_blank" href="https://t.me/devbanner">Here</a></p>
-      <p class="info">Want to contribute to the <b>frontend</b> on Github? Visit <a target="_blank" href="https://github.com/devBanner/devBanner_Frontend">Here</a></p>
-      <p class="info">Want to contribute to the <b>backend</b> on Github? Visit <a target="_blank" href="https://github.com/devBanner/devBanner">Here</a></p>
-      <p class="info">Want to contribute or share ideas on <b>Gitter</b> chat? Visit <a target="_blank" href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Here</a></p>
-      <p class="info">Want to see our <b>FAQ</b>? Visit <a target="_blank" href="https://devbanner.gitbooks.io/faq">Here</a></p>
-    </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="res/js/script.js"></script>
-  </body>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>devBanner - Create Your Own devRant Banner!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" href="res/images/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="lib/Bootstrap/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="lib/AnimateCSS/animate.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="res/css/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="res/css/spinner.css" />
+</head>
+<body>
+<div class="content">
+	<div id="header">
+		<span id="header-before" style="background-color: #9e85a1;"></span>
+		<img id="header-img" class="img-fluid" src="res/images/logo_transparent.png">
+	</div>
+	<div id="body" class="container">
+		<div id="generator" class="row">
+			<div class="col-md-8 col-centered">
+				<form id="generator-form">
+					<div class="form-group">
+						<label for="username">Username:</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="Enter Username..." required>
+					</div>
+					<div class="form-group">
+						<label for="subtext">Subtext:</label>
+						<input type="text" class="form-control" name="subtext" id="subtext" placeholder="Enter Subtext...">
+					</div>
+
+					<a id="downloadBtn" class="btn button-red float-right hidden-link disabled" download="banner.png"
+					   href="res/images/examplebanner.png">
+						<svg style="vertical-align: sub;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path fill="#fff" d="M16 11h5l-9 10-9-10h5v-11h8v11zm1 11h-10v2h10v-2z" />
+						</svg>
+						Download
+					</a>
+					<button type="submit" class="btn button-red float-right" id="generateBtn">
+						<svg style="vertical-align: sub;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path fill="#fff"
+							      d="M9 12l-4.463 4.969-4.537-4.969h3c0-4.97 4.03-9 9-9 2.395 0 4.565.942 6.179 2.468l-2.004 2.231c-1.081-1.05-2.553-1.699-4.175-1.699-3.309 0-6 2.691-6 6h3zm10.463-4.969l-4.463 4.969h3c0 3.309-2.691 6-6 6-1.623 0-3.094-.65-4.175-1.699l-2.004 2.231c1.613 1.526 3.784 2.468 6.179 2.468 4.97 0 9-4.03 9-9h3l-4.537-4.969z" />
+						</svg>
+						Generate
+					</button>
+				</form>
+			</div>
+			<div class="col-md-10 col-centered text-center">
+				<div id="result">
+					<h2 class="text-center">Your Generated Banner:</h2>
+					<div id="banner-container">
+						<img class="img-fluid rounded" id="banner" src="res/images/examplebanner.png">
+						<div class="bannerOverlay errorOverlay rounded">
+							<p>
+								Couldn't generate banner.
+								<br />
+								Please check you username!
+							</p>
+						</div>
+						<div class="bannerOverlay spinnerOverlay rounded">
+							<div class="spinner">Loading...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="container">
+		<div id="text-links" class="text-center">
+			<a href="https://devcredits.herokuapp.com/?title=devBanner&users=cozyplanes,Kimmax,mitiko,ewpratten,Skayo">Credits</a>
+			<a href="https://devbanner.gitbooks.io/faq" style="margin-left: 20px;">FAQ</a>
+		</div>
+		<div id="icon-links" class="text-center">
+			<a href="https://t.me/devbanner" title="telegram" target="_blank">
+				<svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path fill="#C1C1CA" id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+			</a>
+			<a href="https://github.com/devBanner/devBanner_Frontend" title="GitHub - Frontend" target="_blank" style="margin-left: 10px;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path fill="#C1C1CA"
+					      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+				</svg>
+				<sub>1</sub>
+			</a>
+			<a href="https://github.com/devBanner/devBanner" title="GitHub - Backend" target="_blank" style="margin-left: 10px;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path fill="#C1C1CA"
+					      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+				</svg>
+				<sub>2</sub>
+			</a>
+			<a href="https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+			   title="Gitter"
+			   target="_blank"
+			   style="margin-left: 10px;">
+				<svg aria-labelledby="simpleicons-gitter-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="24"
+				     width="24">
+					<path fill="#C1C1CA" d="M8.501 4.001H10.5V24H8.501V4.001zm6.999 0V24h-2V4.001h2zM3.5 0h2.001v15H3.5V0zm15 4.001h2V15h-2V4.001z" />
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="lib/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="res/js/script.js"></script>
+</body>
 </html>
