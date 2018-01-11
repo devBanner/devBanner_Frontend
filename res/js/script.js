@@ -1,54 +1,46 @@
-// Form
-var generatorForm = $('#generator-form');
-var downloadBtn = $('#downloadBtn');
+var banner = document.getElementById("banner");
+var wrapper = document.getElementsByClassName("wrapper")[0];
+var backgroundImage = document.getElementsByClassName("background-image")[0];
+var content = document.getElementsByClassName("content")[0];
 
-// Banner Elements
-var banner = $('#banner');
-var spinnerOverlay = $('.spinnerOverlay');
-var errorOverlay = $('.errorOverlay');
+/*
+Example URL
+https://generator.devbanner.center/banner?username=tisButABug&subtext=test
+*/
 
-// Constants
-const API = 'https://generator.devbanner.center/banner?';
-const EXAMPLE_BANNER = 'res/images/examplebanner.png';
+$("#bannerForm").submit(function(event) {
+  event.preventDefault();
 
-generatorForm.on('submit', function (event) {
-	event.preventDefault();
+  var $form = $(this);
+  var $banner = $("#banner");
+  var $spinnerOverlay = $(".spinnerOverlay");
+  var $errorOverlay = $(".errorOverlay");
+  var url = $form.attr('action') + '?' + $form.serialize();
 
-	// Create URL
-	var bannerUrl = API + generatorForm.serialize();
+  banner.onload = () => {
+    $spinnerOverlay.fadeOut();
+  };
 
-	// Disable spamming generate-button
-	if (banner.prop('src') == bannerUrl) {
-		return;
-	}
+  banner.onerror = () => {
+    $spinnerOverlay.hide();
+    $errorOverlay.show();
+    banner.src = "res/images/examplebanner.png";
+  };
 
-	// Load/Generate banner
-	banner.prop('src', bannerUrl);
-	downloadBtn.prop('href', bannerUrl);
-	downloadBtn.removeClass('disabled');
-
-	// Overlay
-	spinnerOverlay.show();
-	errorOverlay.hide();
+  $spinnerOverlay.fadeIn();
+  $errorOverlay.hide();
+  banner.src = url;
 });
 
-generatorForm.on('input', function () {
-	// Disable download if input changed (so user gets what he expects)
-	downloadBtn.addClass('disabled');
-});
+function resize() {
+  wrapper.height = window.innerHeight * 1.1;
+  backgroundImage.height = window.innerHeight * 1.2;
+  if(window.innerWidth < 600){
+    content.style.left = "45%";
+  }else{
+    content.style.left = "48%";
+  }
+}
 
-banner.on('error', function () {
-	// Set banner to example
-	banner.prop('src', EXAMPLE_BANNER);
-	downloadBtn.prop('href', EXAMPLE_BANNER);
-	downloadBtn.addClass('disabled');
-
-	// Overlay
-	spinnerOverlay.hide();
-	errorOverlay.show();
-});
-
-banner.on('load', function () {
-	// Overlay
-	spinnerOverlay.fadeOut();
-});
+window.onresize = resize;
+resize();
