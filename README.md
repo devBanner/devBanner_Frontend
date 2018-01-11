@@ -24,8 +24,8 @@ If you can contribute, please make a PR. We appreciate it.
 
 ## Current Features
 - Your own subtext. You can write some lengthy subtext as well!
-- Copyright-free. You don't need to worry about all the copyright problems. The backend itself is licensed GPL, frontend is Unlicense, and the banner itself should probably be WTFPL (😂).
-- Lightweight. Most banners are under 500KB, so no problem downloading and using anywhere!
+- Copyright-free. You don't need to worry about all the copyright problems.
+- Lightweight. Most banners are under 50KB, so no problem downloading and using anywhere!
 
 ## Upcoming Features
 - Improved banner designs
