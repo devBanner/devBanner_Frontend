@@ -57,7 +57,7 @@ https://github.com/devBanner/devBanner - Back-end development repository
 <cozyplanes@tuta.io> - Contact me directly
 
 
-## Credits
+## Credits (Front-end)
 
 - Contributors
 
