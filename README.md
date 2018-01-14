@@ -66,6 +66,7 @@ https://github.com/devBanner/devBanner - Back-end development repository
 [<img src="https://img.shields.io/badge/contributor-Mitch528-yellow.svg?style=for-the-badge">](https://github.com/Mitch528) 
 [<img src="https://img.shields.io/badge/contributor-LoganS1-red.svg?style=for-the-badge">](https://github.com/LoganS1)
 [<img src="https://img.shields.io/badge/contributor-Skayo-orange.svg?style=for-the-badge">](https://github.com/Skayo)
+[<img src="https://img.shields.io/badge/contributor-skynet-yellowgreen.svg?style=for-the-badge">](https://github.com/INSERT_GITHUB_USERNAME_HERE)
 
 - devRant API
 
