@@ -1,18 +1,33 @@
 // Form
 var generatorForm = $('#generator-form');
 var downloadBtn = $('#downloadBtn');
+var usernameInput = $('#username');
+var subtextInput = $('#subtext');
 
 // Banner Elements
 var banner = $('#banner');
 var spinnerOverlay = $('.spinnerOverlay');
 var errorOverlay = $('.errorOverlay');
+var forbiddenOverlay = $('.forbiddenOverlay');
 
 // Constants
 const API = 'https://generator.devbanner.center/banner?';
 const EXAMPLE_BANNER = 'res/images/examplebanner.png';
+const SUBTEXT_REGEX = /^[A-Za-z0-9\.\,\(\)\s?!\(%\)\[#\]\{@\}\/&<\-+=>$:;,.*'_|~"]*$/g;
 
 generatorForm.on('submit', function (event) {
 	event.preventDefault();
+
+	// Test for forbidden characters
+	if(!subtextInput.val().match(SUBTEXT_REGEX)) {
+		spinnerOverlay.hide();
+		errorOverlay.hide();
+		forbiddenOverlay.show();
+		return;
+	}
+
+	// Store username in cookie (gets automatically shown on next page load)
+	$.cookie('dB_username', usernameInput.val());
 
 	// Create URL
 	var bannerUrl = API + generatorForm.serialize();
@@ -30,6 +45,7 @@ generatorForm.on('submit', function (event) {
 	// Overlay
 	spinnerOverlay.show();
 	errorOverlay.hide();
+	forbiddenOverlay.hide();
 });
 
 generatorForm.on('input', function () {
@@ -46,9 +62,20 @@ banner.on('error', function () {
 	// Overlay
 	spinnerOverlay.hide();
 	errorOverlay.show();
+	forbiddenOverlay.hide();
 });
 
 banner.on('load', function () {
 	// Overlay
 	spinnerOverlay.fadeOut();
+});
+
+$(document).ready(function() {
+	if($.cookie('dB_username')) {
+		// If cookie exists set value of username-input to its value
+		usernameInput.val($.cookie('dB_username'));
+	} else {
+		// else create a new cookie
+		$.cookie('dB_username', '');
+	}
 });
