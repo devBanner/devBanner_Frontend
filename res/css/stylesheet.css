@@ -29,7 +29,7 @@ body {
 a, a:hover, a:active, a:visited {
 	text-decoration: underline;
 	cursor:          pointer;
-	color:           #c1c1ca;
+	color:           #c1c1ca !important;
 	margin:          0px;
 }
 
@@ -180,4 +180,26 @@ a, a:hover, a:active, a:visited {
 	pointer-events: none;
 	cursor:         default;
 	opacity:        0.5;
+}
+
+a.cc-btn.cc-dismiss {
+	text-decoration: none;
+	color:           #fff !important;
+	transition:      background-color .15s ease-in-out;
+}
+
+a.cc-btn.cc-dismiss:hover {
+	background-color: #c14857;
+}
+
+.cc-revoke, .cc-window {
+	font-family: "Comfortaa", sans-serif !important;
+}
+
+.cc-link {
+	opacity: 1 !important;
+}
+
+.cc-link:hover {
+	opacity: 1 !important;
 }
