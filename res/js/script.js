@@ -19,7 +19,7 @@ generatorForm.on('submit', function (event) {
 	event.preventDefault();
 
 	// Test for forbidden characters
-	if(!subtextInput.val().match(SUBTEXT_REGEX)) {
+	if (!subtextInput.val().match(SUBTEXT_REGEX)) {
 		spinnerOverlay.hide();
 		errorOverlay.hide();
 		forbiddenOverlay.show();
@@ -70,12 +70,26 @@ banner.on('load', function () {
 	spinnerOverlay.fadeOut();
 });
 
-$(document).ready(function() {
-	if($.cookie('dB_username')) {
+$(document).ready(function () {
+	if ($.cookie('dB_username')) {
 		// If cookie exists set value of username-input to its value
 		usernameInput.val($.cookie('dB_username'));
 	} else {
 		// else create a new cookie
 		$.cookie('dB_username', '');
 	}
+});
+
+
+// Input Clear button
+function tog(v) {
+	return v ? 'addClass' : 'removeClass';
+}
+$(document).on('input', '.clearable', function () {
+	$(this)[tog(this.value)]('x');
+}).on('mousemove', '.x', function (e) {
+	$(this)[tog(this.offsetWidth - 18 < e.clientX - this.getBoundingClientRect().left)]('onX');
+}).on('touchstart click', '.onX', function (ev) {
+	ev.preventDefault();
+	$(this).removeClass('x onX').val('').change();
 });
