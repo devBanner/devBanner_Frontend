@@ -74,6 +74,7 @@ $(document).ready(function () {
 	if ($.cookie('dB_username')) {
 		// If cookie exists set value of username-input to its value
 		usernameInput.val($.cookie('dB_username'));
+		$('#username').addClass('x');
 	} else {
 		// else create a new cookie
 		$.cookie('dB_username', '');
