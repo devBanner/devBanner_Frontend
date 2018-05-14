@@ -172,8 +172,9 @@ a, a:hover, a:active, a:visited {
 	}
 }
 
-#downloadBtn {
+#downloadBtn, #downloadBtn:hover, #downloadBtn:active, #downloadBtn:visited {
 	margin-left: 15px;
+	color:       #fff !important;
 }
 
 #downloadBtn disabled {
