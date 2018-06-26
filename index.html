@@ -50,6 +50,19 @@
 						<label for="subtext">Subtext :</label>
 						<input type="text" class="form-control clearable" name="subtext" id="subtext" placeholder="Enter your own subtext..." autocomplete="off" required>
 					</div>
+					<div class="form-row align-items-center mb-3">
+						<div class="col-2">
+							<label for="width">Width :</label>
+						</div>
+
+						<div class="col">
+							<input type="range" value="800" min="128" max="2048" class="form-control" name="width" id="width" required>
+						</div>
+
+						<div class="col-1">
+							<span id="widthText">800px</span>
+						</div>
+					</div>
 
 					<a id="downloadBtn" class="btn button-red float-right hidden-link disabled" download="banner.png" href="res/images/examplebanner.png">
 						<svg style="vertical-align: sub;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -69,7 +82,7 @@
 				<div id="result">
 					<h2 class="text-center">Your Generated Banner</h2>
 					<div id="banner-container" class="animated zoomIn">
-						<img class="img-fluid rounded" id="banner" src="res/images/examplebanner.png">
+						<img width="800" height="192" class="img-fluid rounded" id="banner" src="res/images/examplebanner.png">
 						<div class="bannerOverlay errorOverlay rounded">
 							<p>
 								Couldn't generate banner.
