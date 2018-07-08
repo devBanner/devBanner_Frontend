@@ -3,6 +3,8 @@ var generatorForm = $('#generator-form');
 var downloadBtn = $('#downloadBtn');
 var usernameInput = $('#username');
 var subtextInput = $('#subtext');
+var widthInput = $('#width');
+var widthText = $('#widthText');
 
 // Banner Elements
 var banner = $('#banner');
@@ -68,6 +70,10 @@ banner.on('error', function () {
 banner.on('load', function () {
 	// Overlay
 	spinnerOverlay.fadeOut();
+});
+
+widthInput.on('input change', function () {
+	widthText.text(this.value + 'px');
 });
 
 $(document).ready(function () {
