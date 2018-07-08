@@ -33,7 +33,6 @@ generatorForm.on('submit', function (event) {
 
 	// Create URL
 	var bannerUrl = API + generatorForm.serialize();
-	console.log(bannerUrl);
 
 	// Disable spamming generate-button
 	if (banner.prop('src') == bannerUrl) {
