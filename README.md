@@ -11,6 +11,8 @@ Please follow the instructions below.
 
 We are sorry for the inconvenience caused. If you get stuck or have some questions or suggestions, please open an issue in the appropriate repository or drop me an email at <cozyplanes@tuta.io> . Thank you.
 
+----
+
 # devBanner Front-end repository (WEB)
 Responsive front-end in development.
 If you can contribute, please make a PR. We appreciate it.
@@ -27,8 +29,8 @@ If you can contribute, please make a PR. We appreciate it.
 
 <p align="center">
 
-  [<img src="https://img.shields.io/github/issues/devBanner_Frontend/devBanner.svg?style=for-the-badge">](https://github.com/devBanner/devBanner/issues)
-  [<img src="https://img.shields.io/github/issues-pr/devBanner_Frontend/devBanner.svg?style=for-the-badge">](https://github.com/devBanner/devBanner/pulls)
+  [<img src="https://img.shields.io/github/issues/devBanner_Frontend/devBanner.svg?style=for-the-badge">](https://github.com/devBanner/devBanner_Frontend/issues)
+  [<img src="https://img.shields.io/github/issues-pr/devBanner_Frontend/devBanner.svg?style=for-the-badge">](https://github.com/devBanner/devBanner_Frontend/pulls)
   [<img src="https://img.shields.io/gitter/room/devBanner/devBanner.svg?style=for-the-badge">](https://gitter.im/devbanner/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
   
 </p>
