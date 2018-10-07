@@ -1,3 +1,16 @@
+### UPDATE
+Back-end servers are down. If you want to create a banner, you must build the project yourself.
+
+Please follow the instructions below.
+1. Click the GitHub icon marked as 2 in the bottom of the website. 
+2. Clone the repository with git. 
+3. Install .NET Core libraries, as well as IIS. (You need Visual Studio to build the project and install dependencies.) 
+4. Select the solution file, and edit the launchSettings.json file located under devRantBanner/Properties. 
+5. Click the Green Play button in Visual Studio marked either as your browser name (e.g. Chrome) or IIS Express. 
+6. Voila!
+
+We are sorry for the inconvenience caused. If you get stuck or have some questions or suggestions, please open an issue in the appropriate repository or drop me an email at <cozyplanes@tuta.io> . Thank you.
+
 # devBanner Front-end repository (WEB)
 Responsive front-end in development.
 If you can contribute, please make a PR. We appreciate it.
